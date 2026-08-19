@@ -1,30 +1,28 @@
-# 🗣️ VozEscola - Canal de Comunicação e Acompanhamento de Demandas
+# 🗣️ VozCTBJ - Canal de Comunicação e Acompanhamento de Demandas do CTBJ
 
 ## 🚀 Apresentação do Projeto
-O VozEscola é um sistema de gestão de chamados e feedbacks desenvolvido para tornar a comunicação dentro da escola mais democrática, rápida e transparente. Muitas vezes, alunos e pais têm reclamações ou sugestões (sobre a infraestrutura, sobre a metodologia de um professor, sobre a merenda, etc.), mas não sabem a quem recorrer de forma oficial. O VozEscola centraliza todas essas manifestações, garantindo que a gestão escolar tome conhecimento e dê um retorno adequado.
+O VozCTBJ é um sistema de gestão de chamados e feedbacks desenvolvido exclusivamente para a realidade do Colégio Técnico de Bom Jesus (CTBJ). O objetivo é criar um canal oficial, transparente e democrático onde alunos, professores e a gestão possam se comunicar de forma rápida, resolvendo problemas de infraestrutura, dúvidas acadêmicas e até mesmo questões pedagógicas.
 
 ---
 
 ## 💡 Proposta de Valor
-Criar uma ponte confiável entre a comunidade escolar (alunos, pais, professores) e a direção da escola.
-- **Para Alunos/Pais:** Poder reportar um problema ou dar uma sugestão sobre qualquer aspecto da escola (do ar-condicionado à qualidade das aulas) de forma anônima ou identificada, e acompanhar o que a escola está fazendo sobre aquilo.
-- **Para Professores:** Ter um canal para sugerir melhorias na estrutura da sala de aula ou até mesmo solicitar materiais didáticos.
-- **Para a Gestão Escolar:** Conseguir mapear os maiores problemas da escola, identificar professores ou setores que precisam de atenção e tomar decisões baseadas em dados reais.
+Atualmente, o CTBJ já trabalha com uma boa gestão, focando em resolver os problemas mais vitais. No entanto, alguns problemas menores, como banheiros que precisam de manutenção e equipamentos antigos, acabam ficando em segundo plano. Além disso, não existe um canal formal para os alunos darem feedbacks sobre metodologias de ensino sem se sentirem constrangidos.
+O VozCTBJ resolve isso criando uma ponte direta entre a comunidade e a direção.
 
 ---
 
-## 👤 Persona
-* **Nome:** Letícia, 16 anos.
-* **Perfil:** Aluna do 1º ano do Ensino Médio, muito dedicada, mas tem dificuldade de aprendizado em matemática.
-* **Dores:** Ela sente que o professor de matemática é muito rápido e não tira as dúvidas dela. Ela tem vergonha de falar isso pessoalmente para a coordenação com medo de represálias.
-* **Necessidades:** Quer um canal onde ela possa descrever a dificuldade com a metodologia do professor de forma anônima, e que a escola possa ler aquilo e, se possível, oferecer um reforço ou conversar com o professor.
+## 👤 Persona (Aluno do CTBJ)
+* **Nome:** João, 17 anos.
+* **Perfil:** Aluno do 3º ano do Ensino Técnico no CTBJ.
+* **Dores:** Ele tem dúvidas frequentes sobre o calendário de provas e o lançamento de notas no sistema. Além disso, em uma disciplina específica, o professor utiliza uma metodologia onde os alunos precisam buscar o conteúdo sozinhos e ele apenas tira dúvidas. João sente que essa metodologia é boa, mas gostaria de sugerir mais momentos de explicação teórica. Ele tem receio de falar isso pessoalmente para o coordenador.
+* **Necessidades:** Ele quer um sistema onde possa abrir um chamado para tirar dúvidas sobre seu boletim, reportar que um ar-condicionado de uma sala específica está quebrado, e também dar uma sugestão pedagógica de forma **anônima**, para que a coordenação possa ler e avaliar sem saber quem foi.
 
 ---
 
-## 🏛️ Modelo de Negócios: B2B (Sistema Interno)
-O sistema é uma ferramenta de gestão interna vendida para escolas. O valor está em melhorar a satisfação dos alunos e pais (reduzindo a evasão escolar) e dar à direção ferramentas de gestão de qualidade.
+## 🏛️ Modelo de Negócios: B2B (Sistema Interno do CTBJ)
+O sistema é uma ferramenta de gestão interna desenvolvida especialmente para atender as necessidades do Colégio Técnico de Bom Jesus, otimizando o tempo da secretaria, da manutenção e da coordenação.
 
 ---
 
 ## 🎯 Justificativa
-Escolas que possuem canais de escuta ativa têm alunos e pais mais satisfeitos. O VozEscola vai além da manutenção predial: ele entra na área de **gestão pedagógica**. Com ele, a escola consegue ouvir o que realmente está acontecendo dentro das salas de aula, melhorando a qualidade do ensino como um todo.
+O CTBJ é uma escola técnica de referência, e a comunicação é a chave para manter a qualidade do ensino. O VozCTBJ não substitui o atendimento presencial, mas serve como uma triagem eficiente: permite que a gestão priorize os problemas "vitais" (como manda a escola), mas também garanta que problemas menores e sugestões pedagógicas não sejam esquecidos, melhorando a experiência de todos no colégio.
