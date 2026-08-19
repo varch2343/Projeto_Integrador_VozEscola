@@ -1,38 +1,42 @@
-# 📚 Documento de Requisitos do Sistema - VozEscola (Ouvidoria e Demandas Gerais)
+# 📚 Documento de Requisitos do Sistema - VozCTBJ
 
 ## 🎯 1. Requisitos Funcionais (RF)
-*Representam as funcionalidades que o sistema deve executar.*
+*Representam as funcionalidades que o sistema deve executar para atender à comunidade do CTBJ.*
 
 * **[RF01] Cadastro e Perfis de Acesso:**
-  * **Solicitante (Aluno, Pai, Professor):** Pode abrir e acompanhar chamados de qualquer natureza.
-  * **Coordenador/Setor (RH, Direção, Manutenção):** Responsáveis por responder os chamados da sua área.
-  * **Administrador (Diretor):** Tem visão total do sistema, pode gerenciar usuários e categorias.
+  * **Solicitante (Aluno/Pai/Professor):** Pode abrir e acompanhar chamados.
+  * **Gestor (Coordenação, Manutenção, Secretaria):** Responsáveis por responder os chamados da sua área.
+  * **Administrador (Direção):** Tem visão total do sistema e pode gerenciar os demais usuários.
 
-* **[RF02] Abertura de Chamado com Categorias Amplas:** O solicitante preenche um formulário contendo:
-  * **Categoria Principal (O que é?):** Ex: Infraestrutura (Ar, Vazamento), TI (Computador, Internet), Pedagógico (Metodologia do professor, Conteúdo das aulas), Administrativo (Merenda, Limpeza, Secretaria).
-  * **Urgência:** Baixa, Média, Alta.
-  * **Modalidade:** Anônimo ou Identificado (se anônimo, o nome não aparecerá para o funcionário que for responder).
+* **[RF02] Abertura de Chamado com Categorias Específicas do CTBJ:** O formulário de abertura de chamado deve conter:
+  * **Tipo do Chamado:**
+    1. *Infraestrutura (Obras/Manutenção):* Para reportar ar-condicionado quebrado, banheiros com problemas, equipamentos antigos, etc.
+    2. *Pedagógico / Metodologia de Ensino:* **Categoria criada exclusivamente para os alunos.** Permite que o aluno sugira melhorias, critique ou elogie a metodologia de um professor (ex: "Sugiro que o professor X intercale aulas expositivas com as aulas de pesquisa").
+    3. *Acadêmico (Dúvidas):* Para tirar dúvidas sobre o calendário letivo, lançamento de notas no sistema ou rematrícula.
+  * **Localização (Onde fica o problema?):** Ex: Sala de aula 204, Laboratório de Informática, Banheiro do Bloco B.
+  * **Modalidade:** Anônimo ou Identificado (essencial para o feedback pedagógico, onde o aluno pode se sentir mais à vontade para falar).
 
-* **[RF03] Roteamento Inteligente:** O sistema deve direcionar automaticamente o chamado para o setor responsável. Ex: Se o aluno escolhe "Pedagógico", o chamado vai para a Coordenação Pedagógica. Se escolhe "Infraestrutura", vai para a Manutenção.
+* **[RF03] Roteamento Automático:** O sistema deve encaminhar o chamado diretamente para o responsável:
+  * *Infraestrutura* -> Vai para a equipe de manutenção.
+  * *Pedagógico* -> Vai para a coordenação pedagógica.
+  * *Acadêmico* -> Vai para a secretaria.
 
-* **[RF04] Interação e Feedback:** O funcionário responsável deve poder responder ao chamado com uma solução, um pedido de mais informações ou uma justificativa. O solicitante recebe uma notificação (pode ser via e-mail) sobre cada interação.
+* **[RF04] Interação e Resolução:** O funcionário pode responder ao chamado com uma solução, um pedido de mais informações, ou até mesmo justificar porque determinado problema é de baixa prioridade (caso o banheiro ou equipamento antigo não seja urgente naquele momento).
 
-* **[RF05] Dashboard de Gestão:** A direção da escola deve ter um painel com gráficos mostrando:
-  * Quantidade de reclamações por setor.
-  * Quais professores/metodologias estão recebendo mais críticas ou elogios (para direcionar treinamentos).
-  * Tempo médio de resposta de cada setor.
-  * Satisfação geral baseada em uma avaliação final que o solicitante pode dar ao fechar o chamado.
+* **[RF05] Dashboard de Prioridades (Gestão):** Para atender à política da gestão que "procura resolver o vital primeiro", o sistema deve ter um painel que classifica os chamados como: **"Vital", "Urgente", "Média" e "Baixa"**. A gestão pode visualizar um relatório com os chamados mais críticos em primeiro lugar, otimizando o tempo da direção.
+
+* **[RF06] Notificações por E-mail:** Sempre que um chamado for aberto, respondido ou solucionado, o solicitante e o gestor devem receber um e-mail de alerta.
 
 ---
 
 ## 🔒 2. Requisitos Não Funcionais (RNF)
 
-* **[RNF01] Privacidade e Anonimato (LGPD):** Requisito crucial. O sistema deve garantir que, se o aluno escolher "Anônimo", o funcionário que ler o chamado NÃO veja quem abriu. Apenas o administrador (diretor) deve ter a capacidade de "quebrar o anonimato" em casos extremos de segurança.
+* **[RNF01] Garantia de Anonimato (Alta Prioridade):** O sistema deve ter uma camada de segurança que impeça o funcionário de ver quem abriu um chamado na modalidade "Anônimo". Apenas o Administrador Geral (Diretor) pode quebrar o anonimato em casos de segurança (como bullying ou ameaças).
 
-* **[RNF02] Classificação de Conteúdo (Moderação):** Para evitar bullying ou ofensas, as mensagens enviadas devem passar por um filtro de palavras proibidas (ex: palavrões, ameaças). Se detectado, o chamado é suspenso e enviado apenas para a direção.
+* **[RNF02] Filtro de Moderação:** Para evitar que reclamações virem ofensas pessoais a professores, o sistema deve ter um filtro de palavras proibidas. Se o aluno digitar algo grave, o chamado não vai direto para o professor, e sim para a direção analisar.
 
-* **[RNF03] Disponibilidade e Mobilidade:** O sistema precisa ser 100% responsivo e funcionar em celulares, pois alunos e pais usarão majoritariamente o smartphone. Deve estar disponível 24h para que possam reportar problemas a qualquer momento.
+* **[RNF03] Interface Mobile First (Responsiva):** Alunos do CTBJ acessam tudo pelo celular. O sistema deve ser desenvolvido para funcionar perfeitamente em smartphones, com poucos cliques para abrir um chamado.
 
-* **[RNF04] Desempenho:** A listagem dos chamados para os funcionários deve ser carregada em menos de 2 segundos, permitindo que eles gerenciem rapidamente a fila de trabalho.
+* **[RNF04] Disponibilidade:** O sistema precisa estar disponível 24h por dia, 7 dias por semana, para que os alunos possam tirar dúvidas sobre notas ou calendário a qualquer hora do dia ou da noite.
 
-* **[RNF05] Backup e Segurança de Dados:** Todas as interações devem ser armazenadas em um banco de dados relacional seguro, com backups diários, pois representam a "voz da comunidade escolar" e precisam ser preservadas para a gestão.
+* **[RNF05] Segurança de Dados:** Os dados de identificação de alunos e suas notas (caso eles usem o sistema para pedir revisão de nota) devem ser armazenados com criptografia no banco de dados, seguindo os padrões de proteção de dados (LGPD).
