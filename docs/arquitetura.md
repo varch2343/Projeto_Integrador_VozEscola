@@ -1,5 +1,7 @@
 # 🏗️ Arquitetura do Sistema - VozCTBJ
 
+## Link do Trello:https://trello.com/b/wcsVVnnE/atividade
+
 ## 1. Matriz RBAC (Role-Based Access Control)
 
 ### Tabela de Permissões por Perfil
