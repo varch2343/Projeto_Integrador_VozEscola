@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VozCTBJ — Central de Chamados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div><strong>VozCTBJ</strong><span> Canal de Comunicação e Acompanhamento</span></div>
+  <select id="role" aria-label="Perfil">
+    <option value="aluno">Aluno / Solicitante</option>
+    <option value="gestor">Gestor</option>
+    <option value="admin">Administrador</option>
+  </select>
+</header>
+
+<main>
+  <section id="studentView" class="view">
+    <div class="hero">
+      <div>
+        <h1>Olá! 👋</h1>
+        <p>Abra um chamado, acompanhe sua solicitação ou envie um feedback.</p>
+      </div>
+      <button onclick="showForm()">+ Abrir chamado</button>
+    </div>
+
+    <div id="formCard" class="card hidden">
+      <h2>Novo chamado</h2>
+      <form id="ticketForm">
+        <label>Tipo do chamado
+          <select id="category" required>
+            <option value="Infraestrutura">Infraestrutura (Obras/Manutenção)</option>
+            <option value="Pedagógico">Pedagógico / Metodologia de Ensino</option>
+            <option value="Acadêmico">Acadêmico (Dúvidas)</option>
+          </select>
+        </label>
+        <label>Localização
+          <input id="location" placeholder="Ex.: Sala 204, Laboratório..." required>
+        </label>
+        <label>Descrição
+          <textarea id="description" placeholder="Descreva a situação..." required></textarea>
+        </label>
+        <label>Modalidade
+          <select id="mode" required>
+            <option value="Identificado">Identificado</option>
+            <option value="Anônimo">Anônimo</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button type="submit">Enviar chamado</button>
+          <button type="button" class="secondary" onclick="hideForm()">Cancelar</button>
+        </div>
+        <small>Chamados pedagógicos podem ser enviados anonimamente. A identidade de um chamado anônimo só é revelada ao Administrador em situações previstas pelo projeto.</small>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="row"><h2>Meus chamados</h2><span id="count" class="badge"></span></div>
+      <div id="myTickets"></div>
+    </div>
+  </section>
+
+  <section id="managerView" class="view hidden">
+    <div class="hero"><div><h1>Painel do Gestor</h1><p>Priorize e acompanhe os chamados da sua área.</p></div></div>
+    <div class="stats" id="stats"></div>
+    <div class="card"><h2>Fila de atendimento</h2><div id="managerTickets"></div></div>
+  </section>
+
+  <section id="adminView" class="view hidden">
+    <div class="hero"><div><h1>Painel Administrativo</h1><p>Visão geral, moderação e administração.</p></div></div>
+    <div class="stats" id="adminStats"></div>
+    <div class="card"><h2>Chamados e moderação</h2><div id="adminTickets"></div></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
